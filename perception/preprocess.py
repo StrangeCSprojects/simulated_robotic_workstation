@@ -18,3 +18,18 @@ def preprocess_image(image):
 
     return blurred
 
+# Example usage
+if __name__ == "__main__":
+    import sys
+    img_path = "tools/sample_workspace.jpg"
+    image = cv2.imread(img_path)
+
+    if image is None:
+        raise FileNotFoundError(f"Image not found: {img_path}")
+
+    processed = preprocess_image(image)
+
+    # Show the processed image
+    cv2.imshow("Preprocessed Image", processed)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()

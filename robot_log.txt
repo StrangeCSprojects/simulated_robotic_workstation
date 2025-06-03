@@ -1,0 +1,2 @@
+{"timestamp": "2025-06-03T12:57:47.828832", "event": "TOOL_DETECTED", "data": {"center": [89, 104]}}
+{"timestamp": "2025-06-03T12:58:04.322539", "event": "MOTION_PLAN_SUCCESS", "data": {"target": [89, 104], "angles": [0.045968259937538725, 1.6339883751815694]}}
