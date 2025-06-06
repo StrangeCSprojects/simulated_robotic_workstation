@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robotic Dashboard</title>
+</head>
+<body>
+    <h1>Robotic Tool Detection</h1>
+    <form action="/detect">
+        <button type="submit">Run Detection</button>
+    </form>
+    <h2>Detected Tools</h2>
+    {% if tools %}
+        <ul>
+        {% for tool in tools %}
+            <li>
+                Tool {{ loop.index }} at center ({{ tool[0]+tool[2]//2 }}, {{ tool[1]+tool[3]//2 }})
+                <a href="/move/{{ loop.index0 }}">Move to Tool</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tools detected.</p>
+    {% endif %}
+    <a href="/logs">View Logs</a>
+</body>
+</html>

@@ -4,7 +4,7 @@ from perception.detect_tools import detect_tools
 from motion_planning.plan_motion import compute_ik, plot_arm
 from infrastructure.logger import log_event
 
-def run_detection(image_path="tools/tools_list.jpg"):
+def run_detection(image_path="tools/tools_list.png"):
     image = cv2.imread(image_path)
     if image is None:
         print("Error: Image not found.")
